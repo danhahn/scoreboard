@@ -1,0 +1,8 @@
+.Inning {
+  display: flex;
+  flex-direction: column;
+  width: 20px;
+  align-items: center;
+  font-weight: bold;
+  flex: 1;
+}

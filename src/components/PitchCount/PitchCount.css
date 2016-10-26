@@ -1,0 +1,6 @@
+.PitchCount {
+  box-sizing: border-box;
+  flex: 1 0 100%;
+  text-align: right;
+  padding: 10px;
+}

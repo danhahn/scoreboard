@@ -1,0 +1,20 @@
+.Teams {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border: solid gray;
+  border-width: 1px 0 1px 1px;
+}
+
+.Team {
+  border-bottom: 1px solid gray;
+  padding-left: 50px;
+  background: no-repeat left top;
+  background-size: 40px 40px;
+  line-height: 40px;
+  font-weight: bold;
+}
+
+.Team:last-child {
+  border-bottom: none;
+}

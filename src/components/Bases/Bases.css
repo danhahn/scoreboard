@@ -1,0 +1,48 @@
+.Bases {
+  padding: 10px;
+  position: absolute;
+  left: 10px;
+}
+
+.bases {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  height: 41px;
+  width: 41px;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  transform: rotate(45deg);
+}
+
+.baseNumber {
+  transform: rotate(-45deg);
+  display: block;
+}
+
+.base {
+  width: 20px;
+  height: 20px;
+  background-color: lightgray;
+}
+
+.base0 {
+  order: 2;
+}
+
+.base1 {
+  order: 1;
+}
+
+.base2 {
+  order: 3;
+}
+
+.base3 {
+  order: 4;
+}
+
+.baseActive {
+  background-color: orange;
+}
