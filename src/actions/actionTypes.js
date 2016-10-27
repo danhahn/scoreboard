@@ -9,6 +9,10 @@ const basesActionTypes = [
   'SET_SECOND_BASE',
   'SET_THIRD_BASE',
   'SET_PITCH_COUNT',
+  'SET_PITCH_COUNT_REDUCE',
+  'SET_PITCH_COUNT_RESET',
+  'SET_STRIKE',
+  'SET_BALL',
 ];
 
 const actionTypes = [

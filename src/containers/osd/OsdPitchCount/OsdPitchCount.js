@@ -13,6 +13,12 @@ const mapDispatchToProps = (dispatch) => ({
   onClickPitchCountAdd: (pitchCount) => {
     dispatch(actions.setPitchCount(pitchCount));
   },
+  onClickPitchCountReduce: (pitchCount) => {
+    dispatch(actions.setPitchCountReduce(pitchCount));
+  },
+  onClickPitchCountReset: () => {
+    dispatch(actions.setPitchCountReset());
+  },
 });
 
 export default connect(

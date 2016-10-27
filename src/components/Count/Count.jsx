@@ -4,17 +4,19 @@ import './Count.css';
 const Count = React.createClass({
   getDefaultProps() {
     return {
-      balls: 1,
-      strikes: 2,
+      count: {
+        ball: 1,
+        strike: 2,
+      }
     }
   },
   render () {
-    const { balls, strikes } = this.props;
+    const { count } = this.props;
     return (
       <ul className="Count">
-        <span className="balls">{balls}</span>
+        <span className="balls">{count.ball}</span>
         <span>-</span>
-        <span className="strikes">{strikes}</span>
+        <span className="strikes">{count.strike}</span>
       </ul>
     );
   }

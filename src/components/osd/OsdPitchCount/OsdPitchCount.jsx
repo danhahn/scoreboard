@@ -1,5 +1,6 @@
 import _ from 'lodash';
 import React from 'react'
+import Panel from '../../layout/Panel/Panel';
 
 const {
   func,
@@ -9,16 +10,21 @@ const {
 const OsdPitchCount = ({
   pitchCount = 100,
   onClickPitchCountAdd = _.noop,
-  pitchCountSubtrack = _.noop,
+  onClickPitchCountReduce = _.noop,
+  onClickPitchCountReset = _.noop,
 }) => {
   return (
-    <div>
-      <h1>{pitchCount}</h1>
-      <div>
-        <button onClick={(pitchCount) => onClickPitchCountAdd(pitchCount)}>+</button>
-        <button onClick={pitchCountSubtrack}>-</button>
+    <Panel title="PitchCount" display={pitchCount}>
+      <div className="btn-group">
+        <button className="btn btn-success" onClick={() => onClickPitchCountAdd(pitchCount)}>
+          <span className="glyphicon glyphicon-plus"></span>
+        </button>
+        <button className="btn btn-danger" onClick={() => onClickPitchCountReduce(pitchCount)}>
+          <span className="glyphicon glyphicon-minus"></span>
+        </button>
+        <button className="btn btn-default" onClick={() => onClickPitchCountReset()}>Reset</button>
       </div>
-    </div>
+    </Panel>    
   )
 }
 
