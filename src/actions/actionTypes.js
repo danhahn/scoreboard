@@ -7,10 +7,12 @@ const initActionTypes = [
 const basesActionTypes = [
   'SET_FRIST_BASE',
   'SET_SECOND_BASE',
-  'SET_THIRD_BASE'
+  'SET_THIRD_BASE',
+  'SET_PITCH_COUNT',
 ];
 
 const actionTypes = [
+  ...initActionTypes,
   ...basesActionTypes,
 ].reduce((accum, action) => ({
   ...accum,

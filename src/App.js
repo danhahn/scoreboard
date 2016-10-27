@@ -7,7 +7,9 @@ import Score from './components/Score/Score';
 import Outs from './components/Outs/Outs';
 import Count from './components/Count/Count';
 import Inning from './components/Inning/Inning';
-import PitchCount from './components/PitchCount/PitchCount';
+import PitchCount from './containers/PitchCount/PitchCount';
+import OsdPitchCount from './containers/osd/OsdPitchCount/OsdPitchCount';
+
 
 class App extends Component {
   render() {
@@ -26,6 +28,11 @@ class App extends Component {
           <Inning/>
           <Count/>
         </div>
+
+        <div className="osd">
+          <OsdPitchCount></OsdPitchCount>
+        </div>
+
       </div>
     );
   }

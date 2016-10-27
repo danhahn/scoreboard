@@ -7,4 +7,5 @@
   flex-wrap: wrap;
   border: solid gray;
   border-width: 1px 1px 1px 0;
+  position: relative;
 }
