@@ -5,7 +5,7 @@ import './App.css';
 import Bases from './components/Bases/Bases';
 import Teams from './components/Teams/Teams';
 import Score from './components/Score/Score';
-import Outs from './components/Outs/Outs';
+import Outs from './containers/Outs/Outs';
 import Count from './containers/Count/Count';
 import Inning from './components/Inning/Inning';
 import PitchCount from './containers/PitchCount/PitchCount';

@@ -12,7 +12,11 @@ const basesActionTypes = [
   'SET_PITCH_COUNT_REDUCE',
   'SET_PITCH_COUNT_RESET',
   'SET_STRIKE',
+  'SET_STRIKE_RESET',
   'SET_BALL',
+  'SET_OUTS',
+  'SET_OUTS_REDUCE',
+  'SET_OUTS_RESET',
 ];
 
 const actionTypes = [

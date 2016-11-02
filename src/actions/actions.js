@@ -20,9 +20,23 @@ const actionCreators = {
     type: actionTypes.SET_STRIKE,
     strike,
   }),
+  setStrikeReset: () => ({
+    type: actionTypes.SET_STRIKE_RESET,
+  }),
   setBall: (ball) => ({
     type: actionTypes.SET_BALL,
     ball,
+  }),
+  setOuts: (outs) => ({
+    type: actionTypes.SET_OUTS,
+    outs,
+  }),
+  setOutsReduce: (outs) => ({
+    type: actionTypes.SET_OUTS_REDUCE,
+    outs,
+  }),
+  setOutsReset: () => ({
+    type: actionTypes.SET_OUTS_RESET,
   }),
 
 };

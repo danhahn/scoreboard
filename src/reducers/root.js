@@ -24,11 +24,25 @@ const pitchCount = (state = 10, action) => {
   }
 }
 
+const outs = (state = 1, action) => {
+  switch (action.type) {
+    case actionTypes.SET_OUTS:
+      return action.outs + 1;
+    case actionTypes.SET_OUTS_REDUCE:
+      return action.outs - 1;
+    case actionTypes.SET_OUTS_RESET:
+      return 0;
+    default:
+      return state;
+  }
+}
+
 
 const bases = combineReducers({
   firstBase,
   pitchCount,
   count,
+  outs,
 });
 
 export default bases;

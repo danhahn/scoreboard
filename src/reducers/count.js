@@ -5,6 +5,8 @@ const strike = (state = 0, action) => {
   switch (action.type) {
     case actionTypes.SET_STRIKE:
       return action.strike + 1;
+    case actionTypes.SET_STRIKE_RESET:
+      return 0;
     default:
       return state;
   }

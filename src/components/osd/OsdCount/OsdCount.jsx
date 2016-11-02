@@ -13,6 +13,7 @@ const OsdPitchCount = ({
     strike: 2,
   },
   pitchCount,
+  outs,
   onClickStrkie = _.noop,
   onClickBall = _.noop,
   onClickFoul = _.noop,
@@ -20,7 +21,7 @@ const OsdPitchCount = ({
   return (
     <Panel title="Count" display={`Balls - ${count.ball} | Strkes - ${count.strike}`}>
       <div className="btn-group">
-        <button className="btn btn-default" onClick={() => onClickStrkie(count.strike, pitchCount)}>
+        <button className="btn btn-default" onClick={() => onClickStrkie(count.strike, pitchCount, outs)}>
           Strike
         </button>
         <button className="btn btn-default" onClick={() => onClickBall(count.ball, pitchCount)}>
