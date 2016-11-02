@@ -17,7 +17,7 @@ const mapDispatchToProps = (dispatch) => ({
     if(strike === 2) {
       dispatch(actions.setPitchCount(pitchCount));
       dispatch(actions.setStrikeReset());
-      OutsCheck(dispatch,outs);
+      OutsCheck(dispatch, outs);
     } else {
       dispatch(actions.setStrike(strike));
       dispatch(actions.setPitchCount(pitchCount));
@@ -25,15 +25,20 @@ const mapDispatchToProps = (dispatch) => ({
   },
   onClickBall: (ball, pitchCount) => {
     if(ball === 3) {
-      dispatch(actions.setBall(ball, pitchCount));
+      dispatch(actions.setBallReset());
       dispatch(actions.setPitchCount(pitchCount));
     } else {
       dispatch(actions.setBall(ball, pitchCount));
       dispatch(actions.setPitchCount(pitchCount));
     }
   },
-  onClickFoul: () => {
-    dispatch(actions.setPitchCountReset());
+  onClickFoul: (strike, pitchCount) => {
+    if(strike < 2) {
+      dispatch(actions.setStrike(strike));
+      dispatch(actions.setPitchCount(pitchCount));
+    } else {
+      dispatch(actions.setPitchCount(pitchCount));
+    }
   },
 });
 

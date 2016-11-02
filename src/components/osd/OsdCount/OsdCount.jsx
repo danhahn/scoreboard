@@ -27,7 +27,7 @@ const OsdPitchCount = ({
         <button className="btn btn-default" onClick={() => onClickBall(count.ball, pitchCount)}>
           Ball
         </button>
-        <button className="btn btn-default" onClick={() => onClickFoul()}>Foul</button>
+        <button className="btn btn-default" onClick={() => onClickFoul(count.strike, pitchCount)}>Foul</button>
       </div>
     </Panel>
   )

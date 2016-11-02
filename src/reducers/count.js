@@ -5,6 +5,8 @@ const strike = (state = 0, action) => {
   switch (action.type) {
     case actionTypes.SET_STRIKE:
       return action.strike + 1;
+    case actionTypes.SET_STRIKE_REDUCE:
+      return action.strike - 1;
     case actionTypes.SET_STRIKE_RESET:
       return 0;
     default:
@@ -16,6 +18,10 @@ const ball = (state = 0, action) => {
   switch (action.type) {
     case actionTypes.SET_BALL:
       return action.ball + 1;
+    case actionTypes.SET_BALL_REDUCE:
+      return action.ball - 1;
+    case actionTypes.SET_BALL_RESET:
+      return 0;
     default:
       return state;
   }

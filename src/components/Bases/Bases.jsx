@@ -3,17 +3,17 @@ import React from 'react';
 import classNames from 'classnames';
 import './Bases.css';
 
-const { array } =  React.PropTypes;
+const { object } =  React.PropTypes;
 
-const Base = ({base}) => {
-  var styles = classNames({
+const Base = ({base, order}) => {
+  const styles = classNames({
     'base': true,
-    'baseActive': base.active,
+    'baseActive': base,
   });
   return (
     <li
       className={styles}
-      style={{ order: base.id }}
+      style={{ order }}
     >
       <span className="baseNumber"></span>
     </li>
@@ -23,43 +23,24 @@ const Base = ({base}) => {
 const Bases = React.createClass({
   getDefaultProps() {
     return {
-      bases: [
-        {
-          id: 2,
-          player: 'Darryl Strawberry',
-          active: true,
-          name: 'frist',
-        },
-        {
-          id: 1,
-          player: 'Keith Hernandez',
-          active: false,
-          name: 'second',
-        },
-        {
-          id: 3,
-          player: 'Lenny Dykstra',
-          active: true,
-          name: 'third',
-        },
-        {
-          id: 4,
-          player: 'Gary Carter',
-          active: null,
-          name: 'home',
-        },
-      ],
+      bases: {
+        firstBase: true,
+        secondBase: true,
+        thirdBase: true,
+      },
     };
   },
   propTypes: {
-    bases: array,
+    bases: object,
   },
   render () {
-    const { bases } = this.props;
+    const { bases, style } = this.props;
     return (
-      <div className="Bases">
+      <div className="Bases" style={style}>
         <ul className="bases">
-          {_.map(bases, (base, i) => <Base base={base} key={i} />)}
+          <Base order={2} base={bases.firstBase} />
+          <Base order={1} base={bases.secondBase} />
+          <Base order={3} base={bases.thirdBase} />
         </ul>
       </div>
     )

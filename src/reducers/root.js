@@ -1,17 +1,9 @@
 import { combineReducers } from 'redux';
 import actionTypes from '../actions/actionTypes';
 import count from './count';
+import bases from './bases';
 
-const firstBase = (state = true, action) => {
-  switch (action.type) {
-    case actionTypes.SET_FRIST_BASE:
-      return action.firstBase;
-    default:
-      return state;
-  }
-};
-
-const pitchCount = (state = 10, action) => {
+const pitchCount = (state = 0, action) => {
   switch (action.type) {
     case actionTypes.SET_PITCH_COUNT:
       return action.pitchCount + 1;
@@ -24,7 +16,7 @@ const pitchCount = (state = 10, action) => {
   }
 }
 
-const outs = (state = 1, action) => {
+const outs = (state = 0, action) => {
   switch (action.type) {
     case actionTypes.SET_OUTS:
       return action.outs + 1;
@@ -38,11 +30,11 @@ const outs = (state = 1, action) => {
 }
 
 
-const bases = combineReducers({
-  firstBase,
+const scoreboard = combineReducers({
+  bases,
   pitchCount,
   count,
   outs,
 });
 
-export default bases;
+export default scoreboard;

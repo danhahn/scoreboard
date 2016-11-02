@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
 import './App.css';
 
-import Bases from './components/Bases/Bases';
+import Bases from './containers/Bases/Bases';
 import Teams from './components/Teams/Teams';
 import Score from './components/Score/Score';
 import Outs from './containers/Outs/Outs';
@@ -11,6 +11,7 @@ import Inning from './components/Inning/Inning';
 import PitchCount from './containers/PitchCount/PitchCount';
 import OsdPitchCount from './containers/osd/OsdPitchCount/OsdPitchCount';
 import OsdCount from './containers/osd/OsdCount/OsdCount';
+import OsdBases from './containers/osd/OsdBases/OsdBases';
 
 
 class App extends Component {
@@ -34,8 +35,9 @@ class App extends Component {
         </div>
 
         <div className="osd">
-          <OsdPitchCount></OsdPitchCount>
-          <OsdCount></OsdCount>
+          <OsdPitchCount/>
+          <OsdCount/>
+          <OsdBases/>
         </div>
 
       </div>
